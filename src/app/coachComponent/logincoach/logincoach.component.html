@@ -1,0 +1,29 @@
+<app-nav-bar1></app-nav-bar1>
+<div class="col-7 offset-2">
+    <div class="text-center m-5 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="row offset-4">
+            <div class="d-flex align-items-center mb-3 mt-3 pb-3 col-6">
+                <img src="/assets/coach-icon-png-4.png" class="card-img" alt="...">
+                <div class="col-md-7">
+                    <span>Login As Coach</span>
+                </div>
+            </div>
+            <small *ngIf="isvalid==false" [ngStyle]="{color: 'red'}" >invalid credntial</small>
+        </div>
+
+
+        <div class="form-outline mb-4 col-10 offset-1">
+            <input type="text" id="form2Example17" class="form-control form-control-lg" [(ngModel)]="login.id" placeholder="User Id"/>
+
+        </div>
+
+        <div class="form-outline mb-4  col-10 offset-1">
+            <input type="password" id="form2Example27" class="form-control form-control-lg" [(ngModel)]="login.password" placeholder="Password"/>
+
+
+            <div class="container mb-4 mt-3">
+                <button class="btn btn-dark btn-lg btn-block" type="button" (click)="loginBYCoach()">Login</button>
+            </div>
+
+        </div>
+    </div>

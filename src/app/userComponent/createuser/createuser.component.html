@@ -1,0 +1,80 @@
+<app-nav-bar1></app-nav-bar1>
+<div class="container ml-4 mt-4 p-4 shadow-lg" *ngIf="submit==false">
+        <form (ngSubmit) = "onSubmit()" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName4" [(ngModel)]="user.userName" name="userName">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" [(ngModel)]="user.password" name="password">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Mobile Number</label>
+                    <input type="number" class="form-control" id="inputMobileNumberd4" [(ngModel)]="user.mobileNumber" name="mobileNumber">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" [(ngModel)]="user.email" name="email">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Date Of Birth</label>
+                    <input type="date" class="form-control" id="inputDOB4" [(ngModel)]="user.dateOfBirth" name="dateOfBirth">
+                </div>
+                <!-- radio -->
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Gender</label>
+                    <div class="container">
+                        <div class="row">
+            
+                            <div class="form-check col-3">
+                                <input class="form-check-input" type="radio"  id="flexRadioDefault1" [(ngModel)]="user.gender" name="gender" value="M">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                   Male
+                                </label> &nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="form-check col-4">
+            
+                                <input class="form-check-input" type="radio"  id="flexRadioDefault2" checked [(ngModel)]="user.gender" name="gender" value="F">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                   Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">pinCode</label>
+                    <input type="number" class="form-control" id="inputName4" [(ngModel)]="user.pincode" name="pincode">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="user.city" name="city">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">State</label>
+                    <input type="text" class="form-control" id="inputMobileNumberd4" [(ngModel)]="user.state" name="state">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="user.country" name="country">
+                </div>
+                <div>
+                        <button class="btn btn-primary col-md-6 offset-3" type="submit">Submit form</button>
+                </div>
+            </form>
+</div>
+
+<div class="container ml-4 mt-4 p-4 shadow-lg" *ngIf="submit==true">
+    <div class="row offset-2">
+        <div class="img1 col-sm-5 offset-3">
+          <img src="/assets/R.png" class="card-img" alt="...">
+        </div>
+    </div> 
+    <div class="container col-sm-5 offset-3">
+        <h2>Account created successfully</h2>
+        <h4>{{resp}}</h4>
+        <button class="btn btn-primary col-md-6 offset-3" type="submit"  (click)="login()">Submit</button>
+    </div>   
+   
+</div>
